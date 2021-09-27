@@ -1,17 +1,16 @@
 # digdag_embulk_pg
 
-Use Embulk and Digdag to load CSV to PostgreSQL. Prepare the data and run SQL queries
+We are going to use Embulk and Digdag to load CSV to PostgreSQL, prepare the data and run few SQL queries
 
-Prerequisite for this assignment on Linux Environment
+Prerequisite for the assignment on Windows 10 / Linux Environment
 
-1. JAVA 8 (set java path)
-2. Install postgresql
-3. Install pgAdmin (keep the db user as "postgres" and password as "admin")
+1. You have installed `Java` version 8
+2. Install postgresql and configure
+3. Install pgAdmin 4 (create the database with user as "postgres" and password as "admin")
 4. Create database "td_coding_challenge"
+5. Use Git for Windows (Git Bash)
 
-*Note: Run all commands as superuser
-
-5. Install Embulk (use the following command)
+### Install Embulk (run the following command in git bash)
 
 ```
 $ curl --create-dirs -o ~/.embulk/bin/embulk -L "https://dl.embulk.org/embulk-latest.jar"
@@ -20,33 +19,35 @@ $ echo 'export PATH="$HOME/.embulk/bin:$PATH"' >> ~/.bashrc
 $ source ~/.bashrc
 ```
 
-6. Install JDBC input plugins for Embulk-postgresql
+### Install JDBC input plugins for Embulk-postgresql
 ```
 $ embulk gem install embulk-input-postgresql
 ```
-7. Install JDBC output plugins for Embulk-postgresql
+### Install JDBC output plugins for Embulk-postgresql
 ```
 $ embulk gem install embulk-output-postgresql
 ```
 
-8. Install Digdag (use the following command)
+### Install Digdag (use the following command)
 ```
 $ curl -o ~/bin/digdag --create-dirs -L "https://dl.digdag.io/digdag-latest"
 $ chmod +x ~/bin/digdag
 $ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
 ```
 
-*Note: Embulk and Digdag command can be tested using their respective examples 
+### Embulk and Digdag command can be tested using their respective examples 
 
-     for embulk: https://github.com/embulk/embulk#linux--mac--bsd
+     Embulk: https://github.com/embulk/embulk#linux--mac--bsd
 		 
-     for digdag: http://docs.digdag.io/getting_started.html#downloading-the-latest-version
+     Digdag: http://docs.digdag.io/getting_started.html#downloading-the-latest-version
 
-*Note: Keep all the csv, embulk and digdag files in one folder or else provide the path.
+### Digdag workflow execute.
+```bash
 
-Run the following commands to get the results:
-```
-$ sudo -s (to get super user previliges)
-$ digdag secrets --local --set pg.password=admin (set the secret key)
-$ digdag run tdcc.dig --rerun -O log/task (run the digdag command to get results and generte event logs)
+$ cd ~/ # change to the directory where you want to save the project
+$ git clone { COPY PASTE MY GIT REPO }
+$ cd digdag-embulk-postgres/embulk_to_pg
+$ digdag secrets --local --set pg.password=admin
+$ digdag run digdag_embulk_pg.dig -O log/task
+
 ```
