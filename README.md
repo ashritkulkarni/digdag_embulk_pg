@@ -2,8 +2,7 @@
 
 We are going to use Embulk and Digdag to load CSV to PostgreSQL, prepare the data and run few SQL queries
 
-Prerequisite for the assignment on Windows 10 / Linux Environment
-
+Prerequisite for the assignment on Windows 10
 1. You have installed `Java` version 8
 2. Install postgresql and configure
 3. Install pgAdmin 4 (create the database with user as "postgres" and password as "admin")
