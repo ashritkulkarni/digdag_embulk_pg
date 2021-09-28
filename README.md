@@ -14,6 +14,15 @@ Prerequisite for the assignment on Windows 10
 ```
 $ sudo -s
 ```
+Check your java version. If it is not showing any results use below commands
+
+### Install JAVA
+
+```
+$ sudo apt-get install openjdk-8-jdk
+$ java -version
+```
+Make sure it now shows openjdk version "1.8.0_292". Next important steps are installing Embulk and DigDag
 
 ### Install Embulk (run the following command in git bash)
 
@@ -42,16 +51,18 @@ $ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
 
 ### Embulk and Digdag command can be tested using their respective examples 
 
-     Embulk: https://github.com/embulk/embulk#linux--mac--bsd
+     Embulk: ``` $ embulk --help```
 		 
-     Digdag: http://docs.digdag.io/getting_started.html#downloading-the-latest-version
+     Digdag: ``` $ digdag --help```
+     
+* Inorder to simplify the tast of creating scripts you can clone the current repo and run the project as directed below.
 
 ### Digdag workflow execute.
 ```bash
 
 $ cd ~/ # change to the directory where you want to save the project
 $ git clone { COPY PASTE MY GIT REPO }
-$ cd digdag-embulk-postgres/embulk_to_pg
+$ cd digdag_embulk_pg/dd_embulk_pg
 $ digdag secrets --local --set pg.password=admin
 $ digdag run digdag_embulk_pg.dig -O log/task
 
