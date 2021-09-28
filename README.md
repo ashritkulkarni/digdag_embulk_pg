@@ -1,13 +1,20 @@
 # digdag_embulk_pg
 
-We are going to use Embulk and Digdag to load CSV to PostgreSQL, prepare the data and run few SQL queries
+We are going to use Embulk and Digdag to load CSV to PostgreSQL, prepare the data and run few SQL queries. Installing Postgres and pdAdmin 4 can help you reduce more steps instead of installing and creating the database using linux commands. If you are an expert of vim editors then please use linux commands for creating DBs.
 
 Prerequisite for the assignment on Windows 10
 1. You have installed `Java` version 8
 2. Install postgresql and configure
 3. Install pgAdmin 4 (create the database with user as "postgres" and password as "admin")
 4. Create database "td_coding_challenge"
-5. Use Git for Windows (Git Bash)
+5. Install Ubuntu app (https://www.itechguides.com/how-to-install-ubuntu-on-windows-10/)
+
+### Run below command for sudo privilege
+
+```
+$ sudo -s
+
+```
 
 ### Install Embulk (run the following command in git bash)
 
