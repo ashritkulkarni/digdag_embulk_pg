@@ -51,9 +51,9 @@ $ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
 
 ### Embulk and Digdag command can be tested using their respective examples 
 
-     Embulk: ``` $ embulk --help```
+     $ embulk --help
 		 
-     Digdag: ``` $ digdag --help```
+     $ digdag --help
      
 * Inorder to simplify the tast of creating scripts you can clone the current repo and run the project as directed below.
 
