@@ -13,7 +13,6 @@ Prerequisite for the assignment on Windows 10
 
 ```
 $ sudo -s
-
 ```
 
 ### Install Embulk (run the following command in git bash)
