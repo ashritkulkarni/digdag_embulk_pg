@@ -61,7 +61,7 @@ $ echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
 ```bash
 
 $ cd ~/ # change to the directory where you want to save the project
-$ git clone { COPY PASTE MY GIT REPO }
+$ git clone https://github.com/ashritkulkarni/digdag_embulk_pg.git
 $ cd digdag_embulk_pg/dd_embulk_pg
 $ digdag secrets --local --set pg.password=admin
 $ digdag run digdag_embulk_pg.dig -O log/task
